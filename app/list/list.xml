@@ -1,0 +1,10 @@
+
+  <ActionBar title="A to Z Dictionary"></ActionBar>
+  <StackLayout>
+    <TextField [(ngModel)]="currentText" (ngModelChange)="changeText($event)"></TextField>
+    <ListView [items]="source" (itemTap)="showDef($event)">
+      <template let-item='item'>
+        <Label [text]="item.text" textWrap="true"></Label>
+      </template>
+    </ListView>
+  </StackLayout>

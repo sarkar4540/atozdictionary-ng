@@ -1,0 +1,9 @@
+
+  <ActionBar [title]="word"></ActionBar>
+  <StackLayout>
+    <ListView [items]="source">
+      <template let-item='item'>
+        <Label [text]="item.text" textWrap="true"></Label>
+      </template>
+    </ListView>
+  </StackLayout>
